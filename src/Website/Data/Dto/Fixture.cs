@@ -1,8 +1,9 @@
 ﻿using System;
+using Data.Interfaces;
 
 namespace Data.Dto
 {
-    public class Fixture
+    public class Fixture : IEntity
     {
         public Guid Id { get; set; }
         public DateTime Date { get; set; }

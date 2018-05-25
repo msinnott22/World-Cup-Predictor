@@ -1,8 +1,9 @@
 ﻿using System;
+using Data.Interfaces;
 
 namespace Data.Dto
 {
-    public class Team
+    public class Team : IEntity
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

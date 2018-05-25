@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using Data.Interfaces;
 
 namespace Data.Dto
 {
-    public class Prediction
+    public class Game : IEntity
     {
         public Guid Id { get; set; }
         public int UserId { get; set; }
         public int Name { get; set; }
-        public HashSet<Item> Items { get; set; }
+        public HashSet<Prediction> Predictions { get; set; }
         public int TotalPoints { get; set; }
     }
 
-    public class Item
+    public class Prediction
     {
         public Guid Id { get; set; }
         public Guid FixtureId { get; set; }
