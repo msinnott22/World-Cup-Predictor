@@ -8,7 +8,7 @@ using SimpleInjector.Integration.Web.Mvc;
 
 namespace Website
 {
-    public class DependencyInjection
+    public class DependencyInjectionInitializer
     {
         public static void ConfigureDependencyInjection()
         {

@@ -9,7 +9,7 @@ namespace Website
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/node_modules/jquery/dist/jquery.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -20,12 +20,19 @@ namespace Website
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/bootstrap.min.js",
+                      "~/Scripts/sb-admin-2.min.js",
+                      "~/Scripts/respond.js",
+                      "~/node_modules/metismenu/dist/metisMenu.min.js",
+                      "~/node_modules/datatables/media/js/jquery.dataTables.min.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap.min.css",      
+                      "~/Content/sb-admin-2.min.css",
+                      "~/Content/site.css",
+                      "~/node_modules/flag-icon-css/css/flag-icon.min.css",
+                      "~/node_modules/font-awesome/css/font-awesome.min.css",
+                      "~/node_modules/datatables/media/css/jquery.dataTables.min.css"));
         }
     }
 }

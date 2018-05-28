@@ -194,7 +194,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\DependencyInjection.cs" />
+    <Compile Include="App_Start\DependencyInjectionInitializer.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -213,15 +213,27 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\sb-admin-2.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="node_modules\datatables-responsive\js\dataTables.responsive.js" />
+    <Content Include="node_modules\datatables-responsive\js\responsive.bootstrap.js" />
+    <Content Include="node_modules\datatables-responsive\js\responsive.foundation.js" />
+    <Content Include="node_modules\datatables-responsive\js\responsive.jqueryui.js" />
+    <Content Include="node_modules\datatables\media\css\jquery.dataTables.min.css" />
+    <Content Include="node_modules\datatables\media\js\jquery.dataTables.min.js" />
+    <Content Include="node_modules\flag-icon-css\css\flag-icon.min.css" />
+    <Content Include="node_modules\font-awesome\css\font-awesome.min.css" />
+    <Content Include="node_modules\jquery\dist\jquery.min.js" />
+    <Content Include="node_modules\metismenu\dist\metisMenu.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="package.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -233,6 +245,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\sb-admin-2.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
