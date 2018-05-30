@@ -1,9 +1,7 @@
 namespace Data.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
+    using Seed;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Data.WcpContext>
     {
@@ -14,10 +12,10 @@ namespace Data.Migrations
 
         protected override void Seed(Data.WcpContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            Groups.Execute(context);
+            Teams.Execute(context);
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            context.SaveChanges();
         }
     }
 }

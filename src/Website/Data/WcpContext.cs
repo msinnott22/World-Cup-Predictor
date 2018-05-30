@@ -29,6 +29,10 @@ namespace Data
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+
+            modelBuilder.Entity<Group>()
+                .HasMany(g => g.Teams)
+                .WithRequired(t => t.Group); 
         }
 
         public T Load<T>(Guid id) where T : class, IEntity

@@ -61,6 +61,7 @@
     <Compile Include="Dto\Group.cs" />
     <Compile Include="Dto\Game.cs" />
     <Compile Include="Dto\Team.cs" />
+    <Compile Include="Extensions\EntityFramework.cs" />
     <Compile Include="Identity\IdentityDbContext.cs" />
     <Compile Include="IdentityMigrations\201805271808475_First.cs" />
     <Compile Include="IdentityMigrations\201805271808475_First.Designer.cs">
@@ -74,7 +75,13 @@
     <Compile Include="Migrations\201805271726374_Initial.Designer.cs">
       <DependentUpon>201805271726374_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805302046586_AddAbbreviation.cs" />
+    <Compile Include="Migrations\201805302046586_AddAbbreviation.Designer.cs">
+      <DependentUpon>201805302046586_AddAbbreviation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Seed\Groups.cs" />
+    <Compile Include="Migrations\Seed\Teams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WcpContext.cs" />
     <Compile Include="WriteStore.cs" />
@@ -90,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805271726374_Initial.resx">
       <DependentUpon>201805271726374_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805302046586_AddAbbreviation.resx">
+      <DependentUpon>201805302046586_AddAbbreviation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
