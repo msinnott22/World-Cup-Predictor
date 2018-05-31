@@ -35,7 +35,7 @@
         {
             @Html.Partial("_AuthenticatedNav")
         }
-        <div id="page-wrapper">
+        <div id="@(Request.IsAuthenticated ? "page-wrapper" : "")" style="@(!Request.IsAuthenticated ? "margin-left: 30px; margin-right: 30px;" : "")">
             @RenderBody()
             <hr />
             <footer>

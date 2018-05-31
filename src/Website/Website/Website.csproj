@@ -228,6 +228,7 @@
     <Content Include="node_modules\flag-icon-css\css\flag-icon.min.css" />
     <Content Include="node_modules\font-awesome\css\font-awesome.min.css" />
     <Content Include="node_modules\jquery\dist\jquery.min.js" />
+    <Content Include="node_modules\metismenu\dist\metisMenu.min.css" />
     <Content Include="node_modules\metismenu\dist\metisMenu.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

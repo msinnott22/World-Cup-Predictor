@@ -10,7 +10,7 @@
     </div>
     <ul class="nav navbar-top-links navbar-right">
         <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <a class="dropdown-toggle" data-toggle="dropdown">
                 <i class="fa fa-user fa-fw"></i>
                 <i class="fa fa-caret-down"></i>
             </a>
@@ -36,6 +36,37 @@
             <ul class="nav" id="side-menu">
                 <li>
                     <a href="/Dashboard/Index"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="/Leaderboard/Index"><i class="fa fa-table fa-fw"></i> Leaderboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-eye fa-fw"></i> Predictions<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="/Predictions/Index">My Predictions</a>
+                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li>
+                                <a href="/Predictions/Manage">Manage</a>
+                            </li>
+                        }
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-trophy fa-fw"></i> Results<span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li>
+                            <a href="/Results/Index">View</a>
+                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li>
+                                <a href="/Results/Manage">Manage</a>
+                            </li>
+                        }
+                    </ul>
                 </li>
             </ul>
         </div>
