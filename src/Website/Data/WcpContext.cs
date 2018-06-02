@@ -13,6 +13,8 @@ namespace Data
         public DbSet<Game> Games { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<Team> Teams { get; set; }
+        public DbSet<Prediction> Predictions { get; set; }
+        public DbSet<Player> Players { get; set; }
 
         public WcpContext() : this("WCP")
         {
@@ -32,7 +34,15 @@ namespace Data
 
             modelBuilder.Entity<Group>()
                 .HasMany(g => g.Teams)
-                .WithRequired(t => t.Group); 
+                .WithRequired(t => t.Group);
+
+            modelBuilder.Entity<Game>()
+                .HasMany(g => g.Predictions)
+                .WithRequired(p => p.Game);
+
+            modelBuilder.Entity<Game>()
+                .HasMany(g => g.Players)
+                .WithMany();
         }
 
         public T Load<T>(Guid id) where T : class, IEntity

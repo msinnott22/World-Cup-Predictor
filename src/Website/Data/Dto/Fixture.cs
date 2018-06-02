@@ -1,10 +1,12 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using Data.Interfaces;
 
 namespace Data.Dto
 {
     public class Fixture : IEntity
     {
+        [Key]
         public Guid Id { get; set; }
         public DateTime Date { get; set; }
         public DateTime KickOff { get; set; }

@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>World Cup Predictor</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -33,11 +33,17 @@
         }
         else
         {
-            @Html.Partial("_AuthenticatedNav")
+            @Html.Partial("_TopNav")
         }
         <div id="@(Request.IsAuthenticated ? "page-wrapper" : "")" style="@(!Request.IsAuthenticated ? "margin-left: 30px; margin-right: 30px;" : "")">
-            @RenderBody()
-            <hr />
+            @if (Request.IsAuthenticated)
+            {
+                @Html.Partial("_SideNav")
+            }
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+                @RenderBody()
+            </main>
+            <hr/>
             <footer>
                 <p>&copy; @DateTime.Now.Year - World Cup Predictor</p>
             </footer>

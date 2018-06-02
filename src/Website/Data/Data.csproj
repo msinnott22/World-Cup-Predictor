@@ -60,6 +60,8 @@
     <Compile Include="Dto\Fixture.cs" />
     <Compile Include="Dto\Group.cs" />
     <Compile Include="Dto\Game.cs" />
+    <Compile Include="Dto\Player.cs" />
+    <Compile Include="Dto\Prediction.cs" />
     <Compile Include="Dto\Team.cs" />
     <Compile Include="Extensions\EntityFramework.cs" />
     <Compile Include="Identity\IdentityDbContext.cs" />
@@ -78,6 +80,14 @@
     <Compile Include="Migrations\201805302046586_AddAbbreviation.cs" />
     <Compile Include="Migrations\201805302046586_AddAbbreviation.Designer.cs">
       <DependentUpon>201805302046586_AddAbbreviation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021708100_PlayersUpdate.cs" />
+    <Compile Include="Migrations\201806021708100_PlayersUpdate.Designer.cs">
+      <DependentUpon>201806021708100_PlayersUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806021734422_FixUserIdType.cs" />
+    <Compile Include="Migrations\201806021734422_FixUserIdType.Designer.cs">
+      <DependentUpon>201806021734422_FixUserIdType.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Seed\Groups.cs" />
@@ -100,6 +110,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805302046586_AddAbbreviation.resx">
       <DependentUpon>201805302046586_AddAbbreviation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021708100_PlayersUpdate.resx">
+      <DependentUpon>201806021708100_PlayersUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806021734422_FixUserIdType.resx">
+      <DependentUpon>201806021734422_FixUserIdType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

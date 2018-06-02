@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using Data.Interfaces;
 
 namespace Data.Dto
 {
     public class Group : IEntity
     {
+        [Key]
         public Guid Id { get; set; }
         public string Name { get; set; }
         public virtual HashSet<Team> Teams { get; set; }

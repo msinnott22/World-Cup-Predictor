@@ -1,1 +1,10 @@
-﻿<h2>Dashboard</h2>
+﻿@model Website.Models.Output.DashboardViewModel
+
+<h2>Dashboard</h2>
+
+<div>
+    @if (!Model.HasExistingGame)
+    {
+        <button class="btn btn-lg btn-primary">Create Game</button>
+    }
+</div>

@@ -9,7 +9,7 @@ namespace Website
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/node_modules/jquery/dist/jquery.min.js"));
+                        "~/Scripts/jquery-3.0.0.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -21,6 +21,7 @@ namespace Website
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.min.js",
+                      "~/Scripts/popper.js",
                       "~/Scripts/respond.js",
                       "~/node_modules/metismenu/dist/metisMenu.min.js",
                       "~/node_modules/datatables/media/js/jquery.dataTables.min.js",
