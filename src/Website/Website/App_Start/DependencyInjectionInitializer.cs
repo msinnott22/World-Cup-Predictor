@@ -13,6 +13,8 @@ using SimpleInjector;
 using SimpleInjector.Advanced;
 using SimpleInjector.Integration.Web;
 using SimpleInjector.Integration.Web.Mvc;
+using Website.Interfaces;
+using Website.Managers;
 
 namespace Website
 {
@@ -32,6 +34,8 @@ namespace Website
                     : HttpContext.Current.GetOwinContext().Authentication, Lifestyle.Scoped);
             container.Register<ApplicationUserManager>(Lifestyle.Scoped);
             container.Register<ApplicationSignInManager>(Lifestyle.Scoped);
+
+            container.Register<IGameManager, GameManager>(Lifestyle.Scoped);
 
             container.RegisterMvcControllers(Assembly.GetExecutingAssembly());
 

@@ -42,7 +42,11 @@ namespace Data
 
             modelBuilder.Entity<Game>()
                 .HasMany(g => g.Players)
-                .WithMany();
+                .WithRequired(p => p.Game);
+
+            modelBuilder.Entity<Player>()
+                .HasMany(p => p.Predictions)
+                .WithRequired(p => p.Player);
         }
 
         public T Load<T>(Guid id) where T : class, IEntity

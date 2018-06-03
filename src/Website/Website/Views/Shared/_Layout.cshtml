@@ -8,45 +8,23 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div id="wrapper">
-        @if (!Request.IsAuthenticated)
-        {
-            <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        @Html.ActionLink("World Cup Predictor", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        </ul>
-                        @Html.Partial("_LoginPartial")
-                    </div>
-                </div>
-            </div>
-        }
-        else
-        {
-            @Html.Partial("_TopNav")
-        }
-        <div id="@(Request.IsAuthenticated ? "page-wrapper" : "")" style="@(!Request.IsAuthenticated ? "margin-left: 30px; margin-right: 30px;" : "")">
+    @Html.Partial("_NavPartial")
+    <div id="container-fluid">
+        <div class="row">
             @if (Request.IsAuthenticated)
             {
                 @Html.Partial("_SideNav")
             }
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                @RenderBody()
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    @RenderBody()
+                </div>
             </main>
-            <hr/>
-            <footer>
-                <p>&copy; @DateTime.Now.Year - World Cup Predictor</p>
-            </footer>
+            @*<footer class="footer">
+                <div class="container">
+                    <p>&copy; @DateTime.Now.Year - World Cup Predictor</p>
+                </div>
+            </footer>*@
         </div>
     </div>
     @Scripts.Render("~/bundles/jquery")

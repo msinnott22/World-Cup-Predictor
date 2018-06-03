@@ -11,6 +11,8 @@ namespace Data.Dto
         public virtual Fixture Fixture { get; set; }
         public Guid GameId { get; set; }
         public virtual Game Game { get; set; }
+        public Guid PlayerId { get; set; }
+        public virtual Player Player { get; set; }
         public int HomeTeamScore { get; set; }
         public int AwayTeamScore { get; set; }
         public bool ExtraTime { get; set; }

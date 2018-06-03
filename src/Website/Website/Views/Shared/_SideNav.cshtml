@@ -1,42 +1,26 @@
 ﻿<nav class="col-md-2 d-none d-md-block bg-light sidebar">
     <div class="sidebar-sticky">
-        <div class="sidebar-nav navbar-collapse">
-            <ul class="nav flex-column" id="side-menu">
+            <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link" href="/Dashboard/Index"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    <a class="nav-link active" href="/Dashboard/Index">
+                        <i class="fa fa-dashboard fa-fw"></i> Dashboard
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/Leaderboard/Index"><i class="fa fa-table fa-fw"></i> Leaderboard</a>
+                    <a class="nav-link" href="/Leaderboard/Index">
+                        <i class="fa fa-table fa-fw"></i> Leaderboard
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#"><i class="fa fa-eye fa-fw"></i> Predictions<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="/Predictions/Index">My Predictions</a>
-                        </li>
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <li>
-                                <a href="/Predictions/Manage">Manage</a>
-                            </li>
-                        }
-                    </ul>
+                    <a class="nav-link" href="/Predictions/Index">
+                        <i class="fa fa-eye fa-fw"></i> Predictions<span class="fa arrow"></span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#"><i class="fa fa-trophy fa-fw"></i> Results<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="/Results/Index">View</a>
-                        </li>
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <li>
-                                <a href="/Results/Manage">Manage</a>
-                            </li>
-                        }
-                    </ul>
+                    <a class="nav-link" href="/Results/Index">
+                        <i class="fa fa-trophy fa-fw"></i> Results<span class="fa arrow"></span>
+                    </a>
                 </li>
             </ul>
-        </div>
     </div>
 </nav>

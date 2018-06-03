@@ -21,20 +21,13 @@ namespace Website
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.min.js",
-                      "~/Scripts/popper.js",
-                      "~/Scripts/respond.js",
-                      "~/node_modules/metismenu/dist/metisMenu.min.js",
-                      "~/node_modules/datatables/media/js/jquery.dataTables.min.js",
-                      "~/Scripts/sb-admin-2.min.js"));
+                      "~/Scripts/site.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.min.css",
-                      "~/node_modules/metismenu/dist/metisMenu.min.css",      
-                      "~/Content/sb-admin-2.min.css",
                       "~/Content/site.css",
                       "~/node_modules/flag-icon-css/css/flag-icon.min.css",
-                      "~/node_modules/font-awesome/css/font-awesome.min.css",
-                      "~/node_modules/datatables/media/css/jquery.dataTables.min.css"));
+                      "~/node_modules/font-awesome/css/font-awesome.min.css"));
         }
     }
 }

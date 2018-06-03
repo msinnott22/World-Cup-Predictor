@@ -13,6 +13,7 @@ namespace Data.Dto
         [MaxLength(20)]
         public string Name { get; set; }
         public virtual HashSet<Prediction> Predictions { get; set; }
+        //TODO: Rename to TotalPredictionPoints
         public int TotalPoints { get; set; }
         public DateTime Created { get; set; }
         [MaxLength(8)]

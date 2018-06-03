@@ -89,6 +89,10 @@
     <Compile Include="Migrations\201806021734422_FixUserIdType.Designer.cs">
       <DependentUpon>201806021734422_FixUserIdType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806031715463_PlayerRefactor.cs" />
+    <Compile Include="Migrations\201806031715463_PlayerRefactor.Designer.cs">
+      <DependentUpon>201806031715463_PlayerRefactor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Seed\Groups.cs" />
     <Compile Include="Migrations\Seed\Teams.cs" />
@@ -116,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806021734422_FixUserIdType.resx">
       <DependentUpon>201806021734422_FixUserIdType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806031715463_PlayerRefactor.resx">
+      <DependentUpon>201806031715463_PlayerRefactor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
