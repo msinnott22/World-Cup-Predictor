@@ -7,4 +7,12 @@
                 $("#newGameModal").modal("hide");
             }
         });
-    });
+});
+
+$("#copyJoinCodeBtn").click(function() {
+    var copyText = document.getElementById("joinCode");
+    copyText.select();
+    document.execCommand("copy");
+
+    $("#copySuccessMsg").show();
+});

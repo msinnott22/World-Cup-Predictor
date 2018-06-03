@@ -1,14 +1,15 @@
 ﻿@model Website.Models.Output.DashboardViewModel
 
-<h2>Dashboard</h2>
-@if (!Model.HasExistingGame)
-{
-    <div class="align-content-center">
-        <span class="text-muted">You are currently not part of a game!</span>
-    </div>
-    <div class="btn-toolbar mb-2 mb-md-0">
-        <button class="btn btn-outline-primary" data-toggle="modal" data-target="#newGameModal">Create Game</button>
-    </div>
-}
-
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h2>Dashboard</h2>
+    @if (!Model.HasExistingGame)
+    {
+        <div class="align-content-center">
+            <span class="text-muted">You are currently not part of a game!</span>
+        </div>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <button class="btn btn-outline-primary" data-toggle="modal" data-target="#newGameModal">Create Game</button>
+        </div>
+    }
+</div>
 @Html.Partial("_NewGameModal")

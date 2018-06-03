@@ -1,3 +1,23 @@
 ﻿@model Website.Models.Output.GameViewModel
-    
-<h1>@Model.Name</h1>
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1>@Model.Name</h1>
+</div>
+<div class="d-flex">
+    <div class="card border-info w-75">
+        <div class="card-header">
+            Join Code
+        </div>
+        <div class="card-body">
+            <h5 class="card-title text-info">Share this code</h5>
+            <p class="card-text text-info">With anyone you want to Join your game</p>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" value="@Model.JoinCode" id="joinCode" readonly="readonly" />
+                <div class="input-group-append">
+                    <button type="button" id="copyJoinCodeBtn" class="btn btn-sm btn-secondary">Copy</button>
+                </div>
+            </div>
+            <p id="copySuccessMsg" class="ml-2 text-success" style="display: none">Copied!</p>
+        </div>
+    </div>
+</div>
