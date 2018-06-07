@@ -16,7 +16,7 @@ namespace Data
         public DbSet<Prediction> Predictions { get; set; }
         public DbSet<Player> Players { get; set; }
 
-        public WcpContext() : this("WCP")
+        public WcpContext() : base("name=WCP")
         {
         }
 

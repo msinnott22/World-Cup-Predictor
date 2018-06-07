@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.Mvc;
 using Data.Dto;
 using Data.Interfaces;
-using Microsoft.Ajax.Utilities;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
@@ -18,12 +17,10 @@ namespace Website.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-        private IWriteStore _writeStore;
+        private readonly IWriteStore _writeStore;
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager, IWriteStore writeStore)
+        public AccountController(IWriteStore writeStore)
         {
-            UserManager = userManager;
-            SignInManager = signInManager;
             _writeStore = writeStore;
         }
 
@@ -156,11 +153,18 @@ namespace Website.Controllers
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
+                    var existingGame = _writeStore.Query<Game>().FirstOrDefault(g => g.JoinCode.Equals(model.JoinCode));
+
                     var newPlayer = new Player()
                     {
                         Id = Guid.NewGuid(),
                         UserId = user.Id
                     };
+
+                    if (existingGame != null)
+                    {
+                        newPlayer.GameId = existingGame.Id;
+                    }
 
                     _writeStore.Insert(newPlayer);
                     _writeStore.SaveChanges();

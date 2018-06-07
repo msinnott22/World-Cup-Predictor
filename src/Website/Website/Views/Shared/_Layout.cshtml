@@ -8,7 +8,10 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    @Html.Partial("_NavPartial")
+    @if (Request.IsAuthenticated)
+    {
+        @Html.Partial("_NavPartial")
+    }
     <div id="container-fluid">
         <div class="row">
             @if (Request.IsAuthenticated)
@@ -16,13 +19,13 @@
                 @Html.Partial("_SideNav")
             }
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                 @RenderBody()
+                @RenderBody()
             </main>
             @*<footer class="footer">
-                <div class="container">
-                    <p>&copy; @DateTime.Now.Year - World Cup Predictor</p>
-                </div>
-            </footer>*@
+                    <div class="container">
+                        <p>&copy; @DateTime.Now.Year - World Cup Predictor</p>
+                    </div>
+                </footer>*@
         </div>
     </div>
     @Scripts.Render("~/bundles/jquery")

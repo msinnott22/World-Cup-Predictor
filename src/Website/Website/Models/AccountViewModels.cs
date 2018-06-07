@@ -79,6 +79,10 @@ namespace Website.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [StringLength(8)]
+        [Display(Name = "Join Code")]
+        public string JoinCode { get; set; }
     }
 
     public class ResetPasswordViewModel
