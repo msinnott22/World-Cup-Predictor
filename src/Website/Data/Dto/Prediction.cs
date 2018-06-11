@@ -1,9 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Data.Interfaces;
 
 namespace Data.Dto
 {
-    public class Prediction
+    public class Prediction : IEntity
     {
         [Key]
         public Guid Id { get; set; }

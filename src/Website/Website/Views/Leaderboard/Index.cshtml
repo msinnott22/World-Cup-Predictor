@@ -1,1 +1,17 @@
-﻿<h2>Leaderboard</h2>
+﻿@model Website.Models.Output.LeaderboardViewModel
+<h2>Leaderboard</h2>
+
+@foreach (var row in Model.Rows)
+{
+    <div class="row">
+        <div class="col-md-4">
+            <h5>@row.Position</h5>
+        </div>
+        <div class="col-md-4">
+            <h5>@row.Name</h5>
+        </div>
+        <div class="col-md-4">
+            <h5>@row.Points</h5>
+        </div>
+    </div>
+}

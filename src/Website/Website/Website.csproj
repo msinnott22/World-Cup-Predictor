@@ -221,6 +221,7 @@
     <Compile Include="Models\Output\DashboardViewModel.cs" />
     <Compile Include="Models\Output\GameViewModel.cs" />
     <Compile Include="Models\Output\LeaderboardViewModel.cs" />
+    <Compile Include="Models\Output\PredictionsViewModel.cs" />
     <Compile Include="Models\Output\TopNavViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
